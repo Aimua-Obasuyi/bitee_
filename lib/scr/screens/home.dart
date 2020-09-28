@@ -95,7 +95,6 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 2,
             ),
-
             Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CustomText(
@@ -103,25 +102,110 @@ class _HomeState extends State<Home> {
                   size: 19,
                   color: Gray,
                 )),
-
-                Image.asset('images/ssssss.jpg')
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset('images/ssssss.jpg')),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Green,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Green[50],
+                                  offset: Offset(4, 6),
+                                  blurRadius: 15,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5),
+                            child: Icon(
+                              Icons.favorite,
+                              size: 20,
+                              color: White,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                            width: 50,
+                            decoration: BoxDecoration(
+                                color: White,
+                                borderRadius: BorderRadius.circular(8)),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(2),
+                                  child: Icon(
+                                    Icons.star,
+                                    color: Green,
+                                    size: 20,
+                                  ),
+                                ),
+                                Text('4.5')
+                              ],
+                            )),
+                      ),
+                      Positioned.fill(
+                          child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          height: 100,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                              gradient: LinearGradient(
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter,
+                                  colors: [
+                                    Colors.black.withOpacity(0.8),
+                                    Colors.black.withOpacity(0.7),
+                                    Colors.black.withOpacity(0.6),
+                                    Colors.black.withOpacity(0.5),
+                                    Colors.black.withOpacity(0.4),
+                                    Colors.black.withOpacity(0.3),
+                                    Colors.black.withOpacity(0.2),
+                                    Colors.black.withOpacity(0.1),
+                                  ])),
+                        ),
+                      ))
+                    ],
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
-
-
       bottomNavigationBar: Container(
-        
         // color: White,
-          decoration: BoxDecoration(color: White, boxShadow: [
-                  BoxShadow(
-                    color: Green[50],
-                    offset: Offset(1, 1),
-                    blurRadius: 10,
-                  ),
-                ]),
+        decoration: BoxDecoration(color: White, boxShadow: [
+          BoxShadow(
+            color: Green[50],
+            offset: Offset(1, 1),
+            blurRadius: 10,
+          ),
+        ]),
         child: Padding(
-          padding: const EdgeInsets.only(left: 15, right: 15,),
+          padding: const EdgeInsets.only(
+            left: 15,
+            right: 15,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -130,23 +214,18 @@ class _HomeState extends State<Home> {
                   AssetImage(
                     'images/home.png',
                   ),
-                  
-                  
                   color: Green,
                   size: 26,
                   semanticLabel: 'Home',
                 ),
-                
-              
                 onPressed: () {},
-             
               ),
               IconButton(
                 icon: ImageIcon(
                   AssetImage(
                     'images/near_by.png',
                   ),
-                     size: 26,
+                  size: 26,
                 ),
                 onPressed: () {},
               ),
@@ -155,7 +234,7 @@ class _HomeState extends State<Home> {
                   AssetImage(
                     'images/cart.png',
                   ),
-                     size: 26,
+                  size: 26,
                 ),
                 onPressed: () {},
               ),
@@ -164,7 +243,7 @@ class _HomeState extends State<Home> {
                   AssetImage(
                     'images/account.png',
                   ),
-                     size: 26,
+                  size: 26,
                 ),
                 onPressed: () {},
               ),
