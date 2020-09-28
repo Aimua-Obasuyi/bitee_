@@ -1,6 +1,7 @@
 # bitee_
 
-A new Flutter project.
+A food delivery flutter app
+
 
 ## Getting Started
 
