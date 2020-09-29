@@ -1,3 +1,4 @@
+import 'package:bitee_/scr/widget/button_navigation_icon.dart';
 import 'package:bitee_/scr/widget/catagory.dart';
 import 'package:bitee_/scr/widget/featured_products.dart';
 import 'package:bitee_/scr/widget/title.dart';
@@ -237,81 +238,21 @@ class _HomeState extends State<Home> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-          
-                children: [
-                  SizedBox(
-                    height: 40,
-                                      child: IconButton(
-                      icon: ImageIcon(
-                        AssetImage(
-                          'images/home.png',
-                        ),
-                      ),
-                      onPressed: () {},
-                     
-                    ),
-                  ),
-             CustomText(text: 'Home', size: 13,),
-                  
-                ],
+              ButtoNavIcon(
+                image: 'home.png',
+                name: 'Home',
               ),
-            Column(
-          
-                children: [
-                  SizedBox(
-                    height: 40,
-                                      child: IconButton(
-                      icon: ImageIcon(
-                        AssetImage(
-                          'images/near_by.png',
-                        ),
-                      ),
-                      onPressed: () {},
-                     
-                    ),
-                  ),
-             CustomText(text: 'Near By', size: 13,),
-                  
-                ],
+             ButtoNavIcon(
+                image: 'near_by.png',
+                name: 'Near By',
               ),
-              Column(
-          
-                children: [
-                  SizedBox(
-                    height: 40,
-                                      child: IconButton(
-                      icon: ImageIcon(
-                        AssetImage(
-                          'images/cart.png',
-                        ),
-                      ),
-                      onPressed: () {},
-                     
-                    ),
-                  ),
-             CustomText(text: 'Cart', size: 13,),
-                  
-                ],
+              ButtoNavIcon(
+                image: 'cart.png',
+                name: 'Cart',
               ),
-              Column(
-          
-                children: [
-                  SizedBox(
-                    height: 40,
-                                      child: IconButton(
-                      icon: ImageIcon(
-                        AssetImage(
-                          'images/account.png',
-                        ),
-                      ),
-                      onPressed: () {},
-                     
-                    ),
-                  ),
-             CustomText(text: 'Account', size: 13,),
-                  
-                ],
+             ButtoNavIcon(
+                image: 'account.png',
+                name: 'Account',
               ),
             ],
           ),
