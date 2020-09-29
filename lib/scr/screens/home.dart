@@ -159,92 +159,69 @@ class _HomeState extends State<Home> {
                               ],
                             )),
                       ),
-                      
                     ],
-                    
                   ),
-                  
                 ),
                 Positioned.fill(
-                          child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 100,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(20)),
-                                
-                                gradient: LinearGradient(
-                                    begin: Alignment.bottomCenter,
-                                    end: Alignment.topCenter,
-                                    colors: [
-                                      Colors.black.withOpacity(0.8),
-                                      Colors.black.withOpacity(0.7),
-                                      Colors.black.withOpacity(0.6),
-                                      Colors.black.withOpacity(0.5),
-                                      Colors.black.withOpacity(0.4),
-                                      Colors.black.withOpacity(0.3),
-                                      Colors.black.withOpacity(0.1),
-                                      Colors.black.withOpacity(0.05),
-                                    ])),
-                          ),
+                    child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          gradient: LinearGradient(
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                              colors: [
+                                Colors.black.withOpacity(0.8),
+                                Colors.black.withOpacity(0.7),
+                                Colors.black.withOpacity(0.6),
+                                Colors.black.withOpacity(0.5),
+                                Colors.black.withOpacity(0.4),
+                                Colors.black.withOpacity(0.3),
+                                Colors.black.withOpacity(0.1),
+                                Colors.black.withOpacity(0.05),
+                              ])),
+                    ),
+                  ),
+                )),
+                Positioned.fill(
+                    child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: RichText(
+                          text: TextSpan(children: [
+                            TextSpan(
+                                text: 'pancakes \n',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                )),
+                            TextSpan(
+                              text: '\$ 20 \n',
+                              style: TextStyle(
+                                fontSize: 17,
+                              ),
+                            )
+                          ]),
                         ),
-                      )),
-                      Positioned.fill(
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(12, 8, 8, 8),
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'pancakes \n',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 17,
-                                        )
-                                      ),TextSpan(
-                                        text: '\$ 20 \n',
-                                        style: TextStyle(
-                                       
-                                          fontSize: 17,
-                                        )
-                                      )
-                                    ]
-                                  ),
-                                ),
-                              ),
-                               Padding(
-                                padding: const EdgeInsets.all(10),
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: '\$ 20 \n',
-                                        style: TextStyle(
-                                       
-                                          fontSize: 17,
-                                        )
-                                      )
-                                    ]
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )
-                      ,))
+                      ),
+                    ],
+                  ),
+                ))
               ],
             )
           ],
         ),
       ),
       bottomNavigationBar: Container(
-        // color: White,
+        height: 55,
         decoration: BoxDecoration(color: White, boxShadow: [
           BoxShadow(
             color: Green[50],
@@ -254,49 +231,87 @@ class _HomeState extends State<Home> {
         ]),
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 15,
-            right: 15,
+            left: 12,
+            right: 12,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IconButton(
-                icon: ImageIcon(
-                  AssetImage(
-                    'images/home.png',
+              Column(
+          
+                children: [
+                  SizedBox(
+                    height: 40,
+                                      child: IconButton(
+                      icon: ImageIcon(
+                        AssetImage(
+                          'images/home.png',
+                        ),
+                      ),
+                      onPressed: () {},
+                     
+                    ),
                   ),
-                  color: Green,
-                  size: 26,
-                  semanticLabel: 'Home',
-                ),
-                onPressed: () {},
+             CustomText(text: 'Home', size: 13,),
+                  
+                ],
               ),
-              IconButton(
-                icon: ImageIcon(
-                  AssetImage(
-                    'images/near_by.png',
+            Column(
+          
+                children: [
+                  SizedBox(
+                    height: 40,
+                                      child: IconButton(
+                      icon: ImageIcon(
+                        AssetImage(
+                          'images/near_by.png',
+                        ),
+                      ),
+                      onPressed: () {},
+                     
+                    ),
                   ),
-                  size: 26,
-                ),
-                onPressed: () {},
+             CustomText(text: 'Near By', size: 13,),
+                  
+                ],
               ),
-              IconButton(
-                icon: ImageIcon(
-                  AssetImage(
-                    'images/cart.png',
+              Column(
+          
+                children: [
+                  SizedBox(
+                    height: 40,
+                                      child: IconButton(
+                      icon: ImageIcon(
+                        AssetImage(
+                          'images/cart.png',
+                        ),
+                      ),
+                      onPressed: () {},
+                     
+                    ),
                   ),
-                  size: 26,
-                ),
-                onPressed: () {},
+             CustomText(text: 'Cart', size: 13,),
+                  
+                ],
               ),
-              IconButton(
-                icon: ImageIcon(
-                  AssetImage(
-                    'images/account.png',
+              Column(
+          
+                children: [
+                  SizedBox(
+                    height: 40,
+                                      child: IconButton(
+                      icon: ImageIcon(
+                        AssetImage(
+                          'images/account.png',
+                        ),
+                      ),
+                      onPressed: () {},
+                     
+                    ),
                   ),
-                  size: 26,
-                ),
-                onPressed: () {},
+             CustomText(text: 'Account', size: 13,),
+                  
+                ],
               ),
             ],
           ),
