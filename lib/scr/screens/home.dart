@@ -159,34 +159,85 @@ class _HomeState extends State<Home> {
                               ],
                             )),
                       ),
-                      Positioned.fill(
+                      
+                    ],
+                    
+                  ),
+                  
+                ),
+                Positioned.fill(
                           child: Align(
                         alignment: Alignment.bottomCenter,
-                        child: Container(
-                          height: 100,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              gradient: LinearGradient(
-                                  begin: Alignment.bottomCenter,
-                                  end: Alignment.topCenter,
-                                  colors: [
-                                    Colors.black.withOpacity(0.8),
-                                    Colors.black.withOpacity(0.7),
-                                    Colors.black.withOpacity(0.6),
-                                    Colors.black.withOpacity(0.5),
-                                    Colors.black.withOpacity(0.4),
-                                    Colors.black.withOpacity(0.3),
-                                    Colors.black.withOpacity(0.2),
-                                    Colors.black.withOpacity(0.1),
-                                  ])),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                                
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomCenter,
+                                    end: Alignment.topCenter,
+                                    colors: [
+                                      Colors.black.withOpacity(0.8),
+                                      Colors.black.withOpacity(0.7),
+                                      Colors.black.withOpacity(0.6),
+                                      Colors.black.withOpacity(0.5),
+                                      Colors.black.withOpacity(0.4),
+                                      Colors.black.withOpacity(0.3),
+                                      Colors.black.withOpacity(0.1),
+                                      Colors.black.withOpacity(0.05),
+                                    ])),
+                          ),
                         ),
-                      ))
-                    ],
-                  ),
-                ),
+                      )),
+                      Positioned.fill(
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(12, 8, 8, 8),
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: 'pancakes \n',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17,
+                                        )
+                                      ),TextSpan(
+                                        text: '\$ 20 \n',
+                                        style: TextStyle(
+                                       
+                                          fontSize: 17,
+                                        )
+                                      )
+                                    ]
+                                  ),
+                                ),
+                              ),
+                               Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '\$ 20 \n',
+                                        style: TextStyle(
+                                       
+                                          fontSize: 17,
+                                        )
+                                      )
+                                    ]
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                      ,))
               ],
             )
           ],
