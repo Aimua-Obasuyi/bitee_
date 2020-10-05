@@ -3,7 +3,7 @@ import 'package:bitee_/scr/widget/catagory.dart';
 import 'package:bitee_/scr/widget/featured_products.dart';
 import 'package:bitee_/scr/widget/title.dart';
 import 'package:flutter/material.dart';
-import '../commons.dart';
+import '../helpers/style.dart';
 
 class Home extends StatefulWidget {
   @override

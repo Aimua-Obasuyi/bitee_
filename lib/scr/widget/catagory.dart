@@ -1,6 +1,6 @@
 import 'package:bitee_/scr/widget/title.dart';
 import 'package:flutter/material.dart';
-import '../commons.dart';
+import '../helpers/style.dart';
 import 'package:bitee_/scr/models/catagory.dart';
 
 List<Catagory> catagoriesList = [
